@@ -1,6 +1,8 @@
 <?php
-class ItemDoPedido{
-    protected $tipo;
+abstract class ItemDoPedido{
+    protected $tipo = "";
+    protected $sabor = "";
+    protected $borda = "";
     
     public function getTipo(){
         return $this->tipo;
@@ -10,4 +12,15 @@ class ItemDoPedido{
         $this->tipo = $tipo;
     }
 
+    public function getSabor(){
+        return $this->sabor;
+    }
+
+    public function setSabor($sabor){
+        $this->sabor = $sabor;
+    }
+
+    public function getborda(){
+        return $this->borda;
+    }
 }

@@ -3,7 +3,6 @@ class Pizza extends ItemDoPedido{
     protected $tamanho;
     protected $sabor;
     protected $borda;
-    protected $tipo;
 
     public function getTamanho(){
         return $this->tamanho;
@@ -30,10 +29,12 @@ class Pizza extends ItemDoPedido{
     }
 
     public function getValor(){
-        if($this->tipo === "especial"){
+        if($this->tamanho === "P"){
             return 50;
-        } elseif ($this->tipo === "tradicional"){
-            return 40;
+        } elseif ($this->tamanho === "M"){
+            return 65;
+        }elseif($this->tamanho === "G"){
+            return 80;
         }
     }
 }
